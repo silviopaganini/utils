@@ -1,0 +1,24 @@
+{
+  "name": "utils-perf",
+  "version": "1.0.0",
+  "description": "collection of fast math operations and other browser optimisations",
+  "main": "utils-perf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:silviopaganini/utils.git"
+  },
+  "keywords": [
+    "math",
+    "performance",
+    "utils"
+  ],
+  "author": "@robotlabs & @silviopaganini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silviopaganini/utils/issues"
+  },
+  "homepage": "https://github.com/silviopaganini/utils"
+}

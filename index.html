@@ -1,0 +1,65 @@
+<html>
+<body>
+<div id="squareLinear" style="position: absolute;top:150px; width: 100px;height: 100px;line-height:100px;text-align:center;background-color:#000;color:white;">linear</div>
+<div id="squareSpherical" style="position: absolute;top:270px; width: 100px;height: 100px;line-height:100px;text-align:center;background-color:#000;color:white;">spherical</div>
+
+<button onclick="start();">start</button>
+<h2>open your console</h2>
+<script src="utils-perf.js"></script>
+<script>
+
+var tests = [
+    "floor: " + UTILS.floor(.5),
+    "round: " + UTILS.round(.5),
+    "coin: " + UTILS.coin(),
+    "coin -1/1: " + UTILS.coinN(),
+    "radians: " + UTILS.rad(35),
+    "random in range: " + UTILS.random(1,2),
+    "clamp: " + UTILS.clamp(.5, 1, 2),
+    "near: " + UTILS.near(.5, 1, 2),
+    "map: " + UTILS.map(1.5, 1, 2, 3, 4),
+    "lerp: " + UTILS.lerp(.5, 1, 2),
+    "norm: " + UTILS.norm(.5, 1, 2),
+    "steps: " + UTILS.steps(1, .1, 2),
+    "between: " + UTILS.between(.5, 1, 2),
+].join("\n");
+
+console.log(tests);
+
+// var interLinear = 0,
+//     targetLinear = 300,
+//     deltaLinear  = 300;
+
+// var interSpherical = 0,
+//     targetSpherical = 300,
+//     deltaSpherical  = .05;
+
+// function start(){
+
+//     interLinear = 0;
+//     targetLinear = 300;
+//     deltaLinear  = .05;
+
+//     interSpherical = 0;
+//     targetSpherical = 300;
+//     deltaSpherical  = .05;
+
+//     update();
+// }
+
+// function update() {
+//     interLinear = UTILS.interpolate.linear(interLinear, targetLinear, deltaLinear);
+//     console.log(interLinear)
+
+//     document.getElementById('squareLinear').style.left = interLinear + 'px';
+
+//     interSpherical = UTILS.interpolate.spherical(interSpherical, targetSpherical, deltaSpherical);
+//     document.getElementById('squareSpherical').style.left = interSpherical + 'px';
+
+//     requestAnimationFrame(update);
+// }
+
+</script>
+
+</body>
+</html>
