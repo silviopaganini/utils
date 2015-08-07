@@ -43,30 +43,30 @@ var UTILS = {
     // return true/false if number in between
     between : function(n1, n2, n3){ return isNaN(n1) || isNaN(n2) || isNaN(n3) ? NaN : n1 >= Math.min(n2, n3) && n1 <= Math.max(n2, n3); },
 
-    // interpolate : {
-    //     spherical : function (current, target, delta) { return current * (1.0 - delta) + target * delta; },
-    //     linear    : function (current, target, delta) { return current + (target - current) * delta; }
-    // },
+    interpolate : {
+        spherical : function (current, target, delta) { return current * (1.0 - delta) + target * delta; },
+        linear    : function (current, target, delta) { return current + (target - current) * delta; }
+    },
 
-    //  ease: {
-    //     linear: function(t) { return t},
+     ease: {
+        linear: function(t) { return t},
 
-    //     // accelerating from zero velocity
-    //     inQuad: function(t) { return Math.pow(t, 2)},
+        // accelerating from zero velocity
+        inQuad: function(t) { return Math.pow(t, 2)},
 
-    //     // decelerating to zero velocity
-    //     outQuad: function(t) { return -(Math.pow((t - 1), 2) - 1)},
+        // decelerating to zero velocity
+        outQuad: function(t) { return -(Math.pow((t - 1), 2) - 1)},
 
-    //     // acceleration until halfway, then deceleration
-    //     inOutQuad: function(t){ 
-    //         if ((t /= 0.5) < 1) return 0.5 * Math.pow(t, 2);
-    //         return -0.5 * ((t -= 2) * t - 2);
-    //     },
+        // acceleration until halfway, then deceleration
+        inOutQuad: function(t){ 
+            if ((t /= 0.5) < 1) return 0.5 * Math.pow(t, 2);
+            return -0.5 * ((t -= 2) * t - 2);
+        },
 
-    //     inCubic: function(t) { return Math.pow( t, 3)},
+        inCubic: function(t) { return Math.pow( t, 3)},
 
-    //     outCubic: function(t) { return Math.pow((t - 1), 3) + 1},
-    // }
+        outCubic: function(t) { return Math.pow((t - 1), 3) + 1},
+    }
 
 }
 
