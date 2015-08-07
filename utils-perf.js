@@ -6,11 +6,11 @@ var UTILS = {
     // faster Math.round
     round   : function(n){ return ~~(n + .5); },             
     
-    // flip a coin
-    coin    : function(n){ return Math.random() < .5; },     
+    // flip a coin // n for probability
+    coin    : function(n){ return Math.random() < (n ? n : .5); },     
     
-    // random 1 or -1
-    coinN   : function(n){ return Math.random() < .5 ? 1 : -1; },
+    // random 1 or -1 // n for probability
+    coinN   : function(n){ return Math.random() < (n ? n : .5) ? 1 : -1; },
     
     // to radians
     rad     : function(n){ return n * Math.PI / 180; },      
