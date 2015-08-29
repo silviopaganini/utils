@@ -17,6 +17,20 @@ var UTILS = {
     
     // random in range
     random  : function(min, max){ return Math.random() * (max - min) + min; },
+
+    // random array
+    randomArray  : function(elements){ 
+        if(typeof elements == "number")
+        {
+            var rr = [];
+            for (var i = elements - 1; i >= 0; i--) rr.push(i);
+        } else {
+            var rr = elements;
+        }
+        
+        for(i=rr.length;i--;) rr.push(rr.splice(Math.floor(Math.random() * (i + 1)),1)[0]);
+        return rr; 
+    },
     
     // clamp number 
     clamp   : function(val, min, max) { return Math.max(min, Math.min(max, val)); },
