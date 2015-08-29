@@ -1,6 +1,6 @@
 {
   "name": "utils-perf",
-  "version": "1.0.2",
+  "version": "1.0.21",
   "description": "collection of fast math operations and other browser optimisations",
   "main": "utils-perf.js",
   "scripts": {

@@ -16,7 +16,7 @@ var UTILS = {
     rad     : function(n){ return n * Math.PI / 180; },      
     
     // random in range
-    random  : function(min, max){ return Math.random() * (max - min) + min; },
+    random  : function(max, min){ min = min || 0; return Math.random() * (max - min) + min; },
 
     // random array
     randomArray  : function(elements){ 
