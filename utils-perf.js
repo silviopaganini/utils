@@ -18,6 +18,34 @@ var UTILS = {
     // random in range
     random  : function(max, min){ min = min || 0; return Math.random() * (max - min) + min; },
 
+    // round random in range
+    rrandom  : function(max, min){ min = min || 0; return ~~(Math.random() * (max - min) + min + .5); },
+
+    // generate number 0-9999
+    genNum : function(nums)
+    {
+        var maxNum = "";
+        var i = 0;
+        while(i < howMany)
+        {
+            maxNum += "9";
+            i++;
+        }
+
+        var a = (Math.round(Math.random() * Number(maxNum))).toString();
+        var result = "";
+
+        i = a.length;
+        while(i < howMany)
+        {
+            result += "0";
+            i++;
+        }
+
+        result += a.toString();
+        return result;
+    }
+
     // random array
     randomArray  : function(elements){ 
         if(typeof elements == "number")
