@@ -44,7 +44,7 @@ var UTILS = {
 
         result += a.toString();
         return result;
-    }
+    },
 
     // random array
     randomArray  : function(elements){ 
