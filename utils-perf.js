@@ -1,8 +1,7 @@
 var UTILS = {
 
     // distance between 2 vectors
-    distance : function(v1, v2) { return Math.sqrt( Math.pow((v2.x - v1.x), 2) + Math.pow((v2.y - v1.y), 2) ); 
-    },
+    distance : function(v1, v2) { return Math.sqrt( Math.pow((v2.x - v1.x), 2) + Math.pow((v2.y - v1.y), 2) ); },
 
     // faster Math.floor
     floor   : function(n){ return n >> 0; },
