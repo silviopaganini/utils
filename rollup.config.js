@@ -1,11 +1,15 @@
 import pkg from './package.json'
-import minify from 'rollup-plugin-babel-minify'
+import babel from 'rollup-plugin-babel'
+// import minify from 'rollup-plugin-babel-minify'
 
 export default [
   {
     input: 'src/index.js',
     plugins: [
-      minify()
+      babel({ presets: ['es2015-rollup'], babelrc: false })
+      // minify({
+      //   comments: false
+      // })
     ],
     output: [
       {
