@@ -6,7 +6,7 @@ NPM Collection of JS utils
 
 ## Usage
 ```bash
-$ npm install utils-perf --save-dev
+$ npm install utils-perf --save
 ```
 
 Check `index.html` for the examples

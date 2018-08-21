@@ -1,10 +1,11 @@
 {
-  "name": "utils-perf",
-  "version": "1.1.5",
+  "name": "@fluuuid/math-utils",
+  "version": "1.2.0",
   "description": "collection of fast math operations and other browser optimisations",
-  "main": "utils-perf.js",
+  "main": "lib/bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require babel-polyfill ./*.test.js",
+    "build": "rollup src/index.js --file lib/bundle.js --format umd --name \"Futils\""
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,21 @@
   "bugs": {
     "url": "https://github.com/silviopaganini/utils/issues"
   },
-  "homepage": "https://github.com/silviopaganini/utils"
+  "homepage": "https://github.com/silviopaganini/utils",
+  "standard": {
+    "env": "mocha",
+    "parser": "babel-eslint"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "rollup": "^0.64.1",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
 }
