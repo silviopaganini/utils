@@ -1,10 +1,11 @@
 {
   "name": "@fluuuid/math-utils",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "collection of fast math operations and other browser optimisations",
   "main": "lib/bundle.js",
   "scripts": {
     "test": "mocha ./*.test.js",
+    "lint": "standard ./src --fix",
     "build": "rollup src/index.js --file lib/bundle.js --format umd --name \"Futils\""
   },
   "repository": {
