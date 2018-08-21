@@ -3,7 +3,7 @@ const {
   floor,
   distance,
   round
-} = require('./lib/bundle')
+} = require('../lib/bundle.js')
 
 describe('FLUUUID utils collection', () => {
   it('should floor to 0', () => {
