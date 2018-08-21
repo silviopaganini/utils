@@ -2,15 +2,12 @@
   "name": "@fluuuid/math-utils",
   "version": "1.2.10",
   "description": "collection of fast math operations and other browser optimisations",
-
   "main": "lib/bundle.cjs.js",
   "module": "lib/bundle.es6.js",
   "browser": "lib/bundle.umd.js",
-
   "files": [
     "lib"
   ],
-
   "scripts": {
     "test": "mocha ./test/*.test.js",
     "lint": "standard ./src --fix",
@@ -37,11 +34,12 @@
     "parser": "babel-eslint"
   },
   "devDependencies": {
-    "rollup-plugin-commonjs": "^9.1.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
     "chai": "4.1.2",
     "mocha": "5.2.0",
     "rollup": "0.64.1",
+    "rollup-plugin-babel-minify": "^5.0.0",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "standard": "11.0.1"
   }
 }
