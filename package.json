@@ -1,6 +1,6 @@
 {
   "name": "@fluuuid/math-utils",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "collection of fast math operations and other browser optimisations",
   "main": "lib/bundle.js",
   "scripts": {
