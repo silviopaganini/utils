@@ -1,11 +1,15 @@
 {
   "name": "@fluuuid/math-utils",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "collection of fast math operations and other browser optimisations",
 
   "main": "lib/bundle.cjs.js",
   "module": "lib/bundle.esm.js",
   "browser": "lib/bundle.umd.js",
+
+  "files": [
+    "lib"
+  ],
 
   "scripts": {
     "test": "mocha ./test/*.test.js",
