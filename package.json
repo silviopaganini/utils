@@ -1,11 +1,12 @@
 {
   "name": "@fluuuid/math-utils",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "collection of fast math operations and other browser optimisations",
   "main": "lib/bundle.js",
   "scripts": {
-    "test": "mocha --require babel-polyfill ./*.test.js",
-    "build": "rollup src/index.js --file lib/bundle.js --format umd --name \"Futils\""
+    "test": "mocha ./*.test.js",
+    "build": "rollup src/index.js --file lib/bundle.js --format umd --name \"Futils\"",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -27,15 +28,10 @@
     "parser": "babel-eslint"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.0.0-rc.1",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
-    "rollup": "^0.64.1",
-    "standard": "^11.0.1"
-  },
-  "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-eslint": "8.2.6",
+    "chai": "4.1.2",
+    "mocha": "5.2.0",
+    "rollup": "0.64.1",
+    "standard": "11.0.1"
   }
 }
