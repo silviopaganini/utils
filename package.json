@@ -5,8 +5,7 @@
   "main": "lib/bundle.js",
   "scripts": {
     "test": "mocha ./*.test.js",
-    "build": "rollup src/index.js --file lib/bundle.js --format umd --name \"Futils\"",
-    "publish": "npm publish --access public"
+    "build": "rollup src/index.js --file lib/bundle.js --format umd --name \"Futils\""
   },
   "repository": {
     "type": "git",
