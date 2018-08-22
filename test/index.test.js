@@ -1,9 +1,9 @@
-const assert = require('assert')
-const {
+import assert from 'assert'
+import {
   floor,
   distance,
   round
-} = require('../lib/bundle.cjs.js')
+} from '../lib/bundle.es6'
 
 describe('FLUUUID utils collection', () => {
   it('should floor to 0', () => {
