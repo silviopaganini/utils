@@ -1,53 +1,109 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLUUUID Utils - Test results</title>
     <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            line-height: 1;
-            font-size: 125%;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-        }
-        p {
-            margin: 15px 0;
-        }
+      body {
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+        font-size: 18px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
 
-        b {
-            line-height: 2;
-        }
+      h2 {
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 10px;
+      }
 
-        span {
-            color: blue;
-            line-height: 2;
-        }
+      p {
+        margin: 20px 0;
+      }
+
+      code {
+        background-color: #f2f2f2;
+        padding: 3px 6px;
+        border-radius: 4px;
+      }
+
+      span {
+        color: blue;
+        font-weight: bold;
+      }
     </style>
-<body>
-<h2>FLUUUID Utils - Test results</h2>
-<div id="results"></div>
-<script src="./lib/bundle.js"></script>
-<script>
+  </head>
+  <body>
+    <h2>FLUUUID Utils - Test results</h2>
+    <div id="results"></div>
+    <script src="./lib/bundle.umd.js"></script>
+    <script>
+      const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
 
-    var tests = [
-        "<p><b>Floor</b><br><code>Futils.floor(.5)</code><br><span>Result: </span>" + Futils.floor(.5) + "</p>",
-        "<p><b>Round</b><br><code>Futils.round(.5)</code><br><span>Result: </span>" + Futils.round(.5) + "</p>",
-        "<p><b>Flip a coin</b><br><code>Futils.coin()</code><br><span>Result: </span>" + Futils.coin() + "</p>",
-        "<p><b>Flip a coin -1 / 1:<br> </b><code>Futils.coinN()</code><br><span>Result: </span>" + Futils.coinN() + "</p>",
-        "<p><b>Angle to Radians</b><br><code>Futils.rad(35)</code><br><span>Result: </span>" + Futils.rad(35) + "</p>",
-        "<p><b>Random number in range:</b><br><code>Futils.random(1,2)</code><br><span>Result: </span>" + Futils.random(1,2) + "</p>",
-        "<p><b>Clamp</b><br><code>Futils.clamp(.5, 1, 2)</code><br><span>Result: </span>" + Futils.clamp(.5, 1, 2) + "</p>",
-        "<p><b>Near</b><br><code>Futils.near(.5, 1, 2)</code><br><span>Result: </span>" + Futils.near(.5, 1, 2) + "</p>",
-        "<p><b>Map</b><br><code>Futils.map(1.5, 1, 2, 3, 4)</code><br><span>Result: </span>" + Futils.map(1.5, 1, 2, 3, 4) + "</p>",
-        "<p><b>Lerp</b><br><code>Futils.lerp(.5, 1, 2)</code><br><span>Result: </span>" + Futils.lerp(.5, 1, 2) + "</p>",
-        "<p><b>Normalize</b><br><code>Futils.norm(.5, 1, 2)</code><br><span>Result: </span>" + Futils.norm(.5, 1, 2) + "</p>",
-        "<p><b>Steps</b><br><code>Futils.steps(1, .1, 2)</code><br><span>Result: </span>" + Futils.steps(1, .1, 2) + "</p>",
-        "<p><b>Between</b><br><code>Futils.between(.5, 1, 2)</code><br><span>Result: </span>" + Futils.between(.5, 1, 2) + "</p>",
-    ].join("<br>");
+      const tests = [
+        createTestResult('Flip a coin', 'futils.coin()', futils.coin()),
+        createTestResult(
+          'Flip a coin -1 / 1',
+          'futils.coinN()',
+          futils.coinN(),
+        ),
+        createTestResult('Angle to Radians', 'futils.rad(35)', futils.rad(35)),
+        createTestResult(
+          'Random number in range',
+          'futils.random(1,2)',
+          futils.random(1, 2),
+        ),
+        createTestResult(
+          'Clamp',
+          'futils.clamp(.5, 1, 2)',
+          futils.clamp(0.5, 1, 2),
+        ),
+        createTestResult(
+          'Near',
+          'futils.near(.5, 1, 2)',
+          futils.near(0.5, 1, 2),
+        ),
+        createTestResult(
+          'Map',
+          'futils.map(1.5, 1, 2, 3, 4)',
+          futils.map(1.5, 1, 2, 3, 4),
+        ),
+        createTestResult(
+          'Lerp',
+          'futils.lerp(.5, 1, 2)',
+          futils.lerp(0.5, 1, 2),
+        ),
+        createTestResult(
+          'Normalize',
+          'futils.norm(.5, 1, 2)',
+          futils.norm(0.5, 1, 2),
+        ),
+        createTestResult(
+          'Steps',
+          'futils.steps(1, .1, 2)',
+          futils.steps(1, 0.1, 2),
+        ),
+        createTestResult(
+          'Between',
+          'futils.between(.5, 1, 2)',
+          futils.between(0.5, 1, 2),
+        ),
+        createTestResult(
+          'Random Array',
+          `futils.randomArray(${JSON.stringify(arr)})`,
+          futils.randomArray(arr),
+        ),
+      ];
 
-    document.querySelector('#results').innerHTML = tests;
+      document.querySelector('#results').innerHTML = tests.join('');
 
-    var arr = ["a", "b", "c", 'd', 'e', 'f'];
-    var rr = Futils.randomArray(arr);
-    console.log(rr);
-</script>
+      function createTestResult(title, codeSnippet, result) {
+        return `<p><b>${title}</b><br><code>${codeSnippet}</code><br><span>Result: </span> ${result}</p>`;
+      }
 
-</body>
+      console.log(futils.randomArray(arr));
+    </script>
+  </body>
 </html>

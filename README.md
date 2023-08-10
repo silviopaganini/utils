@@ -3,111 +3,156 @@
 [![npm version](https://badge.fury.io/js/%40fluuuid%2Fmath-utils.svg)](https://badge.fury.io/js/%40fluuuid%2Fmath-utils)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install
-```bash
-$ yarn add @fluuuid/math-utils --save
+A collection of utility functions to make your JavaScript and TypeScript development smoother.
+
+## Installation
+
+```sh
+npm add @fluuuid/math-utils
 ```
 
-## Usage
+## Table of Contents
 
-Floor
-```js
-import {floor} from '@fluuuid/math-utils'
-floor(0.5)
-```
+- [FLUUUID Math utils](#fluuuid-math-utils)
+  - [Installation](#installation)
+  - [Table of Contents](#table-of-contents)
+  - [API Reference](#api-reference)
+    - [`distance`](#distance)
+    - [`coin`](#coin)
+    - [`coinN`](#coinn)
+    - [`rad`](#rad)
+    - [`random`](#random)
+    - [`rrandom`](#rrandom)
+    - [`genNum`](#gennum)
+    - [`randomArray`](#randomarray)
+    - [`clamp`](#clamp)
+    - [`near`](#near)
+    - [`map`](#map)
+    - [`lerp`](#lerp)
+    - [`norm`](#norm)
+    - [`steps`](#steps)
+    - [`between`](#between)
 
+## API Reference
 
-Round
-```js
-import {round} from '@fluuuid/math-utils'
-round(0.6)
-```
+### `distance`
 
+Calculate the distance between two points.
+- Parameters:
+  - `v1` (Point): The first point `{x, y}`.
+  - `v2` (Point): The second point `{x, y}`.
+- Returns: Number - The distance between the points.
 
-Flip a coin
-```js
-import {coin} from '@fluuuid/math-utils'
-coin()
-```
+### `coin`
 
+Return a boolean value based on a given probability.
+- Parameters: None
+- Returns: Boolean.
 
-Flip a coin -1 / 1:
-```js
-import {coinN} from '@fluuuid/math-utils'
-coinN()
-```
+### `coinN`
 
+Return 1 or -1 based on a given probability.
+- Parameters: None
+- Returns: Number.
 
-Angle to Radians
-```js
-import {rad} from '@fluuuid/math-utils'
-rad(35)
-```
+### `rad`
 
+Convert an angle from degrees to radians.
+- Parameters:
+  - `angle` (Number): Angle in degrees.
+- Returns: Number - Angle in radians.
 
-Random number in range:
-```js
-import {random} from '@fluuuid/math-utils'
-random(1, 2)
-```
+### `random`
 
-Round Random number in range:
-```js
-import {rrandom} from '@fluuuid/math-utils'
-rrandom(1, 2)
-```
+Get a random number between the given range.
+- Parameters:
+  - `min` (Number): Minimum number.
+  - `max` (Number): Maximum number.
+- Returns: Number.
 
+### `rrandom`
 
-Clamp
-```js
-import {clamp} from '@fluuuid/math-utils'
-clamp(0.5, 1, 2)
-```
+Get a random number including the given range.
+- Parameters:
+  - `min` (Number): Minimum number.
+  - `max` (Number): Maximum number.
+- Returns: Number.
 
+### `genNum`
 
-Near
-```js
-import {near} from '@fluuuid/math-utils'
-near(0.5, 1, 2)
-```
+Generate a random number with n digits.
+- Parameters:
+  - `n` (Number): Number of digits.
+- Returns: Number.
 
+### `randomArray`
 
-Map
-```js
-import {map} from '@fluuuid/math-utils'
-map(1.5, 1, 2, 3, 4)
-```
+Get a random item from the provided array.
+- Parameters:
+  - `arr` (Array): Input array.
+- Returns: Element from the array.
 
+### `clamp`
 
-Lerp
-```js
-import {lerp} from '@fluuuid/math-utils'
-lerp(0.5, 1, 2)
-```
+Clamp a number between two values.
+- Parameters:
+  - `val` (Number): Input value.
+  - `min` (Number): Minimum number.
+  - `max` (Number): Maximum number.
+- Returns: Number.
 
+### `near`
 
-Normalize
-```js
-import {norm} from '@fluuuid/math-utils'
-norm(0.5, 1, 2)
-```
+Check if a number is near another within a given range.
+- Parameters:
+  - `value` (Number): Input value.
+  - `target` (Number): Target value.
+  - `range` (Number): Allowed range.
+- Returns: Boolean.
 
+### `map`
 
-Steps
-```js
-import {steps} from '@fluuuid/math-utils'
-steps(1, 0.1, 2)
-```
+Map a number from one range to another.
+- Parameters:
+  - `value` (Number): Input value.
+  - `start1` (Number): Start of the original range.
+  - `stop1` (Number): End of the original range.
+  - `start2` (Number): Start of the target range.
+  - `stop2` (Number): End of the target range.
+- Returns: Number.
 
+### `lerp`
 
-Between
-```js
-import {between} from '@fluuuid/math-utils'
-between(0.5, 1, 2)
-```
+Linearly interpolate between two numbers.
+- Parameters:
+  - `value` (Number): The interpolation amount (usually between 0 and 1).
+  - `start` (Number): Start number.
+  - `end` (Number): End number.
+- Returns: Number.
 
-Randomise Array
-```js
-import {randomArray} from '@fluuuid/math-utils'
-const arr = ["a", "b", "c", 'd', 'e', 'f']
-const rr = randomArray(arr)
+### `norm`
+
+Normalize a number within a given range.
+- Parameters:
+  - `value` (Number): Input value.
+  - `start` (Number): Start of the range.
+  - `stop` (Number): End of the range.
+- Returns: Number.
+
+### `steps`
+
+Return the number of steps between two numbers given a step size.
+- Parameters:
+  - `start` (Number): Start number.
+  - `step` (Number): Step size.
+  - `end` (Number): End number.
+- Returns: Number.
+
+### `between`
+
+Check if a number is between two other numbers.
+- Parameters:
+  - `value` (Number): Input value.
+  - `min` (Number): Minimum number.
+  - `max` (Number): Maximum number.
+- Returns: Boolean.
