@@ -5,22 +5,22 @@ import resolve from '@rollup/plugin-node-resolve';
 
 export default [
   {
-    input: 'src/index.ts', // Updated to TypeScript input
+    input: 'src/index.ts',
     plugins: [
       resolve(),
       typescript({
         typescript: require('typescript'),
-        tsconfig: "./tsconfig.json", // Explicitly specify the path to your tsconfig
+        tsconfig: "./tsconfig.json",
         useTsconfigDeclarationDir: true
       }),
-      babel({ presets: ['@babel/preset-env'], babelHelpers: 'bundled' }) // Using the more modern preset
+      babel({ presets: ['@babel/preset-env'], babelHelpers: 'bundled' })
     ],
     output: [
       {
         name: 'futils',
         file: pkg.browser,
         format: 'umd',
-        sourcemap: true // Include if you want source maps
+        sourcemap: true 
       }
     ]
   },
@@ -34,8 +34,8 @@ export default [
       })
     ],
     output: [
-      { file: pkg.main, format: 'cjs', sourcemap: true }, // Include if you want source maps
-      { file: pkg.module, format: 'es', sourcemap: true } // Include if you want source maps
+      { file: pkg.main, format: 'cjs', sourcemap: true },
+      { file: pkg.module, format: 'es', sourcemap: true }
     ]
   }
 ];

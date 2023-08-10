@@ -1,21 +1,16 @@
 # FLUUUID Math utils
 
 [![npm version](https://badge.fury.io/js/%40fluuuid%2Fmath-utils.svg)](https://badge.fury.io/js/%40fluuuid%2Fmath-utils)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 A collection of utility functions to make your JavaScript and TypeScript development smoother.
-
-## Installation
-
-```sh
-npm add @fluuuid/math-utils
-```
 
 ## Table of Contents
 
 - [FLUUUID Math utils](#fluuuid-math-utils)
-  - [Installation](#installation)
   - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [UMD](#umd)
   - [API Reference](#api-reference)
     - [`distance`](#distance)
     - [`coin`](#coin)
@@ -32,6 +27,32 @@ npm add @fluuuid/math-utils
     - [`norm`](#norm)
     - [`steps`](#steps)
     - [`between`](#between)
+
+## Installation
+
+```sh
+npm add @fluuuid/math-utils
+```
+
+## Usage
+
+```ts
+import { random } from '@fluuuid/math-utils'
+
+const r = random(1, 2)
+console.log(r) // 1.4471453026086136
+```
+
+### UMD
+
+```html
+<script src="./lib/bundle.umd.js"></script>
+<script>
+    const r = futils.random(1, 2)
+    console.log(r) // 1.4471453026086136
+</script>
+
+```
 
 ## API Reference
 
