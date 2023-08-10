@@ -1,5 +1,5 @@
 import pkg from './package.json';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
 
@@ -9,6 +9,7 @@ export default [
     plugins: [
       resolve(),
       typescript({
+        typescript: require('typescript'),
         tsconfig: "./tsconfig.json", // Explicitly specify the path to your tsconfig
         useTsconfigDeclarationDir: true
       }),
